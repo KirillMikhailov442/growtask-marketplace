@@ -12,6 +12,8 @@
     "format": "prettier --write .",
     "test:screenshots": "playwright test",
     "test:screenshots:update": "playwright test --update-snapshots",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "prepare": "husky"
   },
   "dependencies": {
@@ -25,13 +27,16 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "@pinia/testing": "^2.0.2",
     "@playwright/test": "^1.64.1",
     "@types/node": "^24.13.3",
     "@vitejs/plugin-vue": "^6.0.8",
+    "@vue/test-utils": "^2.5.1",
     "@vue/tsconfig": "^0.9.1",
     "eslint": "^10.12.0",
     "eslint-plugin-vue": "^10.11.1",
     "globals": "^17.13.0",
+    "happy-dom": "^21.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0",
     "postcss-pxtorem": "^6.1.0",
@@ -40,6 +45,7 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.71.2",
     "vite": "^8.3.0",
+    "vitest": "^5.0.4",
     "vue-eslint-parser": "^10.4.1",
     "vue-tsc": "^3.3.11"
   },
