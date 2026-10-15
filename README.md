@@ -65,7 +65,7 @@ pnpm exec playwright install chromium
 
 Diff упавших тестов открывается через `pnpm exec playwright show-trace test-results/<папка>/trace.zip` или в HTML-отчёте.
 
-> Скриншот-тесты не входят в CI: базлайны сгенерированы на macOS, а рендеринг шрифтов на Linux отличается — сравнение запускается локально перед пушем.
+> Скриншот-тесты не входят в CI: базлайны сгенерированы на macOS, а рендеринг шрифтов на Linux отличается. Запускай их локально перед пушем — `pnpm test:screenshots`.
 
 ## CI/CD (GitHub Actions)
 
