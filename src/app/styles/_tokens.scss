@@ -1,0 +1,45 @@
+@use "./mixins" as *;
+
+:root {
+  --color-bg: #ebe6e9;
+  --color-surface: #ffffff;
+  --color-accent: #f23051;
+  --color-accent-dark: #a61029;
+  --color-danger: #cc2929;
+  --color-success: #4caf50;
+  --color-success-bg: #d9f2dc;
+  --color-black: #0d0d0d;
+  --color-dark: #2b2b2b;
+  --color-text-secondary: #404040;
+  --color-text-muted: #999999;
+  --color-gray-bg: #f2f2f2;
+  --color-border: #cccccc;
+  --color-divider: #f2f2f2;
+  --color-footer: #fcd7dd;
+  --color-info-bg: #edf3fa;
+
+  --font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: "Vladivostok", "Inter", system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --shadow-card: 0 0 10px 2px rgba(0, 11, 64, 0.1);
+  --shadow-dropdown: 0 0 25px rgba(0, 11, 64, 0.07);
+
+  --header-height: 66px;
+
+  --transition-fast: 0.15s ease;
+
+  --container-gutter: 16px;
+
+  @include up(tablet) {
+    --container-gutter: 20px;
+  }
+
+  @include up(laptop) {
+    --container-gutter: 45px;
+  }
+}

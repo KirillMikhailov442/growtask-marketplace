@@ -1,0 +1,38 @@
+@use "sass:map";
+
+$breakpoints: (
+  "mobile": 414px,
+  "tablet": 768px,
+  "laptop": 1366px,
+  "desktop": 1920px,
+);
+
+@mixin up($name) {
+  @media (min-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin down($name) {
+  @media (max-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin below($name) {
+  @media (max-width: (map.get($breakpoints, $name) - 1px)) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: 1420px;
+  margin-inline: auto;
+  padding-inline: var(--container-gutter);
+
+  // На широких экранах контейнер — ровно 1420px по контенту, как в макете
+  @media (min-width: 1510px) {
+    padding-inline: 0;
+  }
+}
