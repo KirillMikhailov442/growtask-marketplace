@@ -49,8 +49,8 @@ const controller = new AbortController();
 onMounted(async () => {
   try {
     syncItems((await fetchProducts(controller.signal)).map(mapApiProduct));
-  } catch {
-    // при ошибке или отмене загрузки корзина остаётся с сохранённым состоянием
+  } catch (error) {
+    console.error("Не удалось загрузить корзину", error);
   }
 });
 

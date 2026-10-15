@@ -35,7 +35,8 @@ const STORAGE_KEY = "growtask-promocode-open";
 const loadOpenState = (): boolean => {
   try {
     return localStorage.getItem(STORAGE_KEY) !== "false";
-  } catch {
+  } catch (error) {
+    console.error("localStorage недоступен", error);
     return true;
   }
 };
@@ -51,8 +52,8 @@ const open = ref(loadOpenState());
 watch(open, (value) => {
   try {
     localStorage.setItem(STORAGE_KEY, String(value));
-  } catch {
-    // localStorage недоступен — состояние просто не сохраняется
+  } catch (error) {
+    console.error("localStorage недоступен — состояние не сохранено", error);
   }
 });
 

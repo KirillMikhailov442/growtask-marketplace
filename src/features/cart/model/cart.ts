@@ -17,7 +17,8 @@ const loadState = (): CartState => {
     const raw = sessionStorage.getItem(STORAGE_KEY);
 
     if (raw) return JSON.parse(raw) as CartState;
-  } catch {
+  } catch (error) {
+    console.error("Не удалось прочитать сохранённую корзину", error);
     return { items: [], promoCode: null };
   }
 
