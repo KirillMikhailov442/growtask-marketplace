@@ -2,6 +2,7 @@
   "name": "growtask-marketplace",
   "private": true,
   "version": "1.0.0",
+  "author": "Mikhailov Kirill <mikhailovkirill342@gmail.com>",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -38,6 +39,7 @@
     "vue-eslint-parser": "^10.4.1",
     "vue-tsc": "^3.3.11"
   },
+  "packageManager": "pnpm@12.3.4",
   "lint-staged": {
     "*.{ts,vue}": [
       "prettier --write",
