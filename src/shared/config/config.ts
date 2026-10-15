@@ -1,0 +1,3 @@
+export const PROMOCODE_MIN_ORDER = 5000;
+
+export const DELIVERY_FREE_FROM = 20000;
