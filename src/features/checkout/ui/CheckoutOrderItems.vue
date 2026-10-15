@@ -111,6 +111,10 @@ const plural = computed(() => formatPlural(props.count, ["товар", "това
       width: 64px;
       height: 64px;
     }
+
+    .ui-button {
+      width: 100%;
+    }
   }
 }
 </style>

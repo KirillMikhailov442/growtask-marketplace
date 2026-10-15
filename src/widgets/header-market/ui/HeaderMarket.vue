@@ -135,9 +135,9 @@ const { itemsCount, total } = storeToRefs(store);
     color: var(--color-black);
 
     @include down(tablet) {
-      background-color: var(--color-black);
+      background-color: var(--color-gray-bg);
       border-radius: var(--radius-md);
-      color: #ffffff;
+      color: var(--color-black);
     }
   }
 
