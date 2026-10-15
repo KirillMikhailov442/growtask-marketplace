@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from "node:url";
 import vue from "@vitejs/plugin-vue";
+import postcssPxToRem from "postcss-pxtorem";
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -28,6 +29,16 @@ export default defineConfig({
       scss: {
         silenceDeprecations: ["legacy-js-api"],
       },
+    },
+    postcss: {
+      plugins: [
+        postcssPxToRem({
+          rootValue: 16,
+          propList: ["*"],
+          minPixelValue: 2,
+          mediaQuery: false,
+        }),
+      ],
     },
   },
 });
