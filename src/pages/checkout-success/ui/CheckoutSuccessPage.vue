@@ -11,7 +11,7 @@
       />
       <div class="checkout-success-page__content">
         <span class="checkout-success-page__icon">
-          <UiIcon name="check" size="24" />
+          <UiIcon name="check" size="40" />
         </span>
         <h1 class="checkout-success-page__title">Заказ №001 успешно создан</h1>
         <p class="checkout-success-page__text">Статус заказа вы можете отслеживать в личном кабинете</p>
@@ -49,36 +49,37 @@ import { UiButton, UiIcon } from "@shared/ui";
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-block: 120px 160px;
+    padding-block: 160px;
   }
 
   &__icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
+    width: 80px;
+    height: 80px;
     background-color: var(--color-success-bg);
-    border-radius: var(--radius-lg);
+    border-radius: 16px;
     color: var(--color-success);
   }
 
   &__title {
-    margin-top: 24px;
+    margin-top: 40px;
     font-family: var(--font-heading);
-    font-size: 24px;
+    font-size: 28px;
+    line-height: 1.1;
     font-weight: 700;
-    color: var(--color-black);
+    color: var(--color-dark);
   }
 
   &__text {
-    margin-top: 8px;
+    margin-top: 12px;
     font-size: 16px;
     color: var(--color-text-secondary);
   }
 
   &__content .ui-button {
-    margin-top: 32px;
+    margin-top: 40px;
   }
 }
 </style>
