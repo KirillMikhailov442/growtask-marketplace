@@ -96,7 +96,18 @@ const plural = computed(() => formatPlural(props.count, ["товар", "това
   @include down(tablet) {
     padding: 20px;
 
+    &__thumbs {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
     &__thumb {
+      flex-shrink: 0;
       width: 64px;
       height: 64px;
     }
